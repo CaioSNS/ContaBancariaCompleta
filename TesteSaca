@@ -1,13 +1,24 @@
-public class TesteSaca {
-	
-	public static void main(String[] args) {
-		
-	
-	Conta conta = new ContaCorrente(123, 122);
-	conta.deposita(200);
-	conta.saca(210.0);
-	System.out.println(conta.getSaldo());
-	
+package br.com.bytebank.modelo.teste;
 
-}
+import br.com.bytebank.modelo.banco.Conta;
+import br.com.bytebank.modelo.banco.ContaCorrente;
+import br.com.bytebank.modelo.banco.SaldoInsuficienteException;
+
+public class TesteSaca {
+
+	public static void main(String[] args) {
+		Conta conta = new ContaCorrente(123, 321);
+		
+		conta.deposita(200.0);
+		
+		try {
+			conta.saca(210.0);
+		} catch(SaldoInsuficienteException ex) {
+			System.out.println("Ex: " + ex.getMessage());
+		}
+		
+		System.out.println(conta.getSaldo());
+
+	}
+
 }
