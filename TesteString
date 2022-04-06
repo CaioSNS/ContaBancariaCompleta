@@ -7,22 +7,62 @@ public class TesteString {
 		String nome = "Alura"; // object literal
 		//String outro = new String ("Alura2");
 		
-		System.out.println(nome);
+		char c = c = 'A';
+		char d = 'a';
+		
+		
+		System.out.println("O nome é : " + nome);
 		//System.out.println(outro);
 		nome.replace("A", "a");
-		System.out.println(nome);
+		System.out.println("O Nome com replace continua Alura mesmo com replace: " + nome);
 		nome.toLowerCase();
-		System.out.println(nome);
+		System.out.println("O nome  é : " + nome);
 		
 		//string Imutavel. NAsceu como "Alura" e vai morrer como "Alura"
-		
-		String outronome = nome.replace("A", "a");
+		String nome2 = nome.replace("A", "a"); //char sequence
 		 
-		System.out.println(outronome);
+		System.out.println("O nome2 é : " + nome2);
 		
-		String outronome2 = outronome.toUpperCase();
+		String nome3 = nome2.toUpperCase();
 		
-		System.out.println(outronome2);
+		System.out.println("O nome3 é : " + nome3);
+		
+		String nome4 = nome3.replace(c, d);
+		
+		System.out.println("O nome4 é : " + nome4);
+		
+		
+		char e = nome4.charAt(0);
+		System.out.println("A Posição 0 do nome4 é :" + e);
+		
+		int pos = nome4.indexOf("UR");
+		System.out.println("A posição de UR do nome4 é :" + pos);
+		
+		String sub = nome4.substring(1);
+		System.out.println("A substring do nome4 de 1 é :" + sub);
+		
+		String sub2 = nome4.substring(2);
+		System.out.println("A substring do nome4 de 2 é :" + sub2);
+ 		
+		System.out.println("Usando o nome.lenght em nome4 = " + nome4.length());
+		
+		for (int i = 0;  i < nome4.length(); i++) {
+			System.out.println(nome4.charAt(i));
+		}
+		
+		
+		String vazio = "";
+		String espaco = " ";
+		String outroespaco = espaco.trim();
+		String cheio = "  c  h  e  i  o  ";
+		System.out.println("String vazio " + vazio.isEmpty());
+		System.out.println("String espaco " + espaco.isEmpty());
+		System.out.println("String outroesoaco " + outroespaco.isEmpty() ); // tira os espaços
+		System.out.println("String cheio = :"+ cheio);
+		String cheiocomtrim = cheio.trim();
+		System.out.println("A String cheio com trim é :" + cheiocomtrim);
+		System.out.println("O nome4 contem LUR? " + nome4.contains("LUR"));
+
 	}	
 
 }
