@@ -1,0 +1,28 @@
+package br.com.bytebank.banco.test;
+
+public class TesteString {
+	
+	public static void main(String[] args) {
+		
+		String nome = "Alura"; // object literal
+		//String outro = new String ("Alura2");
+		
+		System.out.println(nome);
+		//System.out.println(outro);
+		nome.replace("A", "a");
+		System.out.println(nome);
+		nome.toLowerCase();
+		System.out.println(nome);
+		
+		//string Imutavel. NAsceu como "Alura" e vai morrer como "Alura"
+		
+		String outronome = nome.replace("A", "a");
+		 
+		System.out.println(outronome);
+		
+		String outronome2 = outronome.toUpperCase();
+		
+		System.out.println(outronome2);
+	}	
+
+}
