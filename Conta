@@ -4,10 +4,11 @@ package br.com.bytebank.banco.modelo;
  * Classe representa a moldura de uma Conta
  * 
  * @author Caio Sakaguti
+ * @param <Cliente>
  *
  */
 
-public abstract class Conta {
+public abstract class Conta<Cliente> {
 
     protected double saldo;
     private int agencia;
@@ -92,5 +93,10 @@ public abstract class Conta {
     public static int getTotal(){
         return Conta.total;
     }
+    
+    @Override
+	public String toString() {
+		return "Numero " + this.getNumero() + " Agencia, " + this.agencia;
+		} 
 
 }
